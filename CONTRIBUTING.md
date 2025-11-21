@@ -178,4 +178,4 @@ This framework is about **proven workflows that prevent known failure modes**.
 
 **Quality over quantity**: We'd rather have 20 excellent, well-used skills than 100 mediocre ones that gather dust.
 
-Thank you for helping make life and work more skillful!
+Thank you for helping make life and work more skillful! 🙏
