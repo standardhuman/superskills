@@ -20,6 +20,7 @@ A collection of actionable, step-by-step workflows (called "skills") that help y
 - **Productivity**: Prioritization, habit formation, energy management
 - **Inner**: Emotion processing, self-connection, values clarification
 - **Communication**: NVC, conflict resolution, boundary setting
+- **Health**: Sleep, strength training, nutrition
 
 Each skill provides a structured process to follow, preventing common failure modes and codifying best practices from established frameworks (GTD, NVC, etc.).
 
@@ -58,6 +59,7 @@ superskills/
 │   ├── productivity/       # Personal productivity domain
 │   ├── inner/              # Inner development domain
 │   ├── communication/      # Interpersonal communication domain
+│   ├── health/             # Physical health domain
 │   ├── using-superskills/  # Meta-skill: discovery system
 │   └── creating-superskills/ # Meta-skill: writing guide
 ├── landing-page/           # Website (Vite + React + Tailwind)
@@ -83,15 +85,19 @@ superskills/
 
 ✅ **Phase 2: Core Skills** (Complete)
 
-**Implemented skills (6):**
+**Implemented skills (10):**
 - `business:weekly-review` - GTD-based weekly planning and reflection
 - `business:decision-making` - Strategic decision-making with pre-mortem analysis
 - `productivity:daily-shutdown` - End-of-day shutdown ritual
+- `productivity:daily-startup` - Beginning-of-day startup ritual
 - `inner:self-connection` - NVC/Focusing-based emotional processing
 - `communication:nvc-conversation` - Nonviolent Communication framework
 - `creative:brainstorming` - Structured creative ideation process
+- `health:sleep-routine` - Evidence-based sleep optimization system
+- `health:strength-program` - Progressive overload strength training
+- `health:nutrition-planning` - Sustainable nutrition and meal prep system
 
-All skills are grounded in established frameworks (GTD, NVC, SCAMPER, First Principles Thinking, etc.) and include actionable workflows with examples.
+All skills are grounded in established frameworks (GTD, NVC, SCAMPER, First Principles Thinking, Matthew Walker, 5/3/1, ISSN, etc.) and include actionable workflows with examples.
 
 🧪 **Phase 3: Testing** (In Progress)
 - Real-world usage validation
