@@ -23,6 +23,13 @@ const skills = [
     color: 'bg-green-500',
   },
   {
+    domain: 'Productivity',
+    name: 'daily-startup',
+    description: 'Beginning-of-day ritual for intentional work',
+    framework: 'Deep Work + Atomic Habits',
+    color: 'bg-green-500',
+  },
+  {
     domain: 'Inner',
     name: 'self-connection',
     description: 'Emotional processing and self-awareness',
@@ -43,6 +50,27 @@ const skills = [
     framework: 'SCAMPER + Design Thinking',
     color: 'bg-pink-500',
   },
+  {
+    domain: 'Health',
+    name: 'sleep-routine',
+    description: 'Evidence-based sleep optimization system',
+    framework: 'Matthew Walker + Huberman',
+    color: 'bg-teal-500',
+  },
+  {
+    domain: 'Health',
+    name: 'strength-program',
+    description: 'Progressive overload strength training',
+    framework: '5/3/1 + Starting Strength',
+    color: 'bg-teal-500',
+  },
+  {
+    domain: 'Health',
+    name: 'nutrition-planning',
+    description: 'Sustainable nutrition and meal prep system',
+    framework: 'ISSN + Precision Nutrition',
+    color: 'bg-teal-500',
+  },
 ]
 
 function App() {
@@ -51,7 +79,7 @@ function App() {
       {/* Hero */}
       <header className="container mx-auto px-6 py-20 text-center">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-          Superskills
+          LifeSkills
         </h1>
         <p className="text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto mb-8">
           Workflow-based practices for all domains of life and work.
@@ -59,7 +87,7 @@ function App() {
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
           <a
-            href="https://github.com/standardhuman/superskills"
+            href="https://github.com/standardhuman/lifeskills"
             className="bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition"
           >
             View on GitHub
@@ -76,12 +104,13 @@ function App() {
       {/* What It Is */}
       <section className="container mx-auto px-6 py-16">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">What is Superskills?</h2>
+          <h2 className="text-3xl font-bold mb-6">What is LifeSkills?</h2>
           <p className="text-lg text-slate-300 mb-8">
             A collection of actionable, step-by-step workflows that help you navigate
             common situations across different life domains. Each skill provides a
             structured process to follow, preventing common failure modes and codifying
-            best practices from established frameworks like GTD, NVC, and Design Thinking.
+            best practices from established frameworks like GTD, NVC, and evidence-based
+            health research.
           </p>
           <div className="grid md:grid-cols-3 gap-6 text-left">
             <div className="bg-slate-800/50 p-6 rounded-xl">
@@ -146,7 +175,7 @@ function App() {
               </h3>
               <div className="bg-slate-900 rounded-lg p-4 font-mono text-sm overflow-x-auto">
                 <p className="text-slate-400"># Clone to your Claude config directory</p>
-                <p className="text-green-400">git clone https://github.com/standardhuman/superskills.git ~/.claude/superskills</p>
+                <p className="text-green-400">git clone https://github.com/standardhuman/lifeskills.git ~/.claude/lifeskills</p>
               </div>
               <p className="text-slate-400 mt-4 text-sm">
                 Skills will be auto-discovered by Claude Code's skill system. The meta-skill
@@ -187,17 +216,17 @@ function App() {
       <footer className="container mx-auto px-6 py-12 border-t border-slate-700">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-slate-400">
-            Superskills • Inspired by <a href="https://github.com/cldcvr/superpowers" className="text-blue-400 hover:text-blue-300">Superpowers</a>
+            LifeSkills • Inspired by <a href="https://github.com/cldcvr/superpowers" className="text-blue-400 hover:text-blue-300">Superpowers</a>
           </p>
           <div className="flex gap-6">
             <a
-              href="https://github.com/standardhuman/superskills"
+              href="https://github.com/standardhuman/lifeskills"
               className="text-slate-400 hover:text-white transition"
             >
               GitHub
             </a>
             <a
-              href="https://github.com/standardhuman/superskills/blob/main/CONTRIBUTING.md"
+              href="https://github.com/standardhuman/lifeskills/blob/main/CONTRIBUTING.md"
               className="text-slate-400 hover:text-white transition"
             >
               Contributing

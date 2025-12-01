@@ -1,11 +1,11 @@
 ---
-name: creating-superskills
-description: Use when writing new superskills or updating existing skills
+name: creating-lifeskills
+description: Use when writing new lifeskills or updating existing skills
 ---
 
-# Creating Superskills
+# Creating LifeSkills
 
-Guide for writing new skills that follow the Superskills Framework standards.
+Guide for writing new skills that follow the LifeSkills Framework standards.
 
 ## When to Create a New Skill
 
@@ -85,6 +85,7 @@ Choose the appropriate domain namespace:
 - **productivity**: Time management, habits, energy, focus
 - **inner**: Emotions, self-connection, values, spiritual practice
 - **communication**: Conversations, conflict, boundaries, listening
+- **health**: Sleep, strength training, nutrition, physical wellness
 
 **If skill spans multiple domains**: Choose primary domain or create variants
 

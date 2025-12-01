@@ -1,6 +1,6 @@
-# Superskills
+# LifeSkills
 
-**[View Landing Page](https://landing-page-delta-amber.vercel.app)** | **[GitHub](https://github.com/standardhuman/superskills)**
+**[View Landing Page](https://landing-page-delta-amber.vercel.app)** | **[GitHub](https://github.com/standardhuman/lifeskills)**
 
 Workflow-based practices for all domains of life and work.
 
@@ -8,7 +8,7 @@ Workflow-based practices for all domains of life and work.
 
 This project is inspired by [Superpowers](https://github.com/cldcvr/superpowers), a collection of engineering workflow skills for Claude Code. Superpowers provides rigorous, discipline-enforcing processes for software development tasks like test-driven development, debugging, and code review.
 
-**Superskills extends this approach beyond engineering** to cover the full spectrum of life domains: business planning, creative work, productivity, emotional processing, and interpersonal communication. Same philosophy—structured workflows grounded in proven frameworks—applied to everything else.
+**LifeSkills extends this approach beyond engineering** to cover the full spectrum of life domains: business planning, creative work, productivity, emotional processing, interpersonal communication, and physical health. Same philosophy—structured workflows grounded in proven frameworks—applied to everything else.
 
 ## What This Is
 
@@ -30,12 +30,12 @@ Each skill provides a structured process to follow, preventing common failure mo
 
 1. Clone to your Claude config directory:
    ```bash
-   git clone https://github.com/standardhuman/superskills.git ~/.claude/superskills
+   git clone https://github.com/standardhuman/lifeskills.git ~/.claude/lifeskills
    ```
 
 2. Skills will be auto-discovered by Claude Code's skill system
 
-3. The `using-superskills` meta-skill will suggest relevant skills based on context
+3. The `using-lifeskills` meta-skill will suggest relevant skills based on context
 
 ### Standalone Use
 
@@ -45,13 +45,13 @@ Read skill files directly from `skills/[domain]/[skill-name]/SKILL.md` and follo
 
 The framework includes two meta-skills:
 
-- **using-superskills**: Discovery system that suggests relevant skills based on conversation context
-- **creating-superskills**: Guide for writing new skills following the framework
+- **using-lifeskills**: Discovery system that suggests relevant skills based on conversation context
+- **creating-lifeskills**: Guide for writing new skills following the framework
 
 ## Structure
 
 ```
-superskills/
+lifeskills/
 ├── skills/
 │   ├── business/           # Business operations domain
 │   ├── creative/           # Creative work domain
@@ -60,8 +60,8 @@ superskills/
 │   ├── inner/              # Inner development domain
 │   ├── communication/      # Interpersonal communication domain
 │   ├── health/             # Physical health domain
-│   ├── using-superskills/  # Meta-skill: discovery system
-│   └── creating-superskills/ # Meta-skill: writing guide
+│   ├── using-lifeskills/   # Meta-skill: discovery system
+│   └── creating-lifeskills/ # Meta-skill: writing guide
 ├── landing-page/           # Website (Vite + React + Tailwind)
 ├── examples/               # Example walkthroughs
 ├── docs/                   # Additional documentation

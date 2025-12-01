@@ -1,23 +1,23 @@
 ---
-name: using-superskills
-description: Use when starting any conversation - establishes discovery system for superskills across all domains
+name: using-lifeskills
+description: Use when starting any conversation - establishes discovery system for lifeskills across all domains
 ---
 
 <EXTREMELY-IMPORTANT>
-If you think there is even a 1% chance a superskill might apply to what you are doing, you ABSOLUTELY MUST check for it.
+If you think there is even a 1% chance a lifeskill might apply to what you are doing, you ABSOLUTELY MUST check for it.
 
 IF A SKILL APPLIES TO YOUR TASK, YOU DO NOT HAVE A CHOICE. YOU MUST USE IT.
 
 This is not negotiable. This is not optional. You cannot rationalize your way out of this.
 </EXTREMELY-IMPORTANT>
 
-# Using Superskills
+# Using LifeSkills
 
 ## MANDATORY FIRST RESPONSE PROTOCOL
 
 Before responding to ANY user message about life/work (non-code topics), you MUST complete this checklist:
 
-1. ☐ Scan available superskills
+1. ☐ Scan available lifeskills
 2. ☐ Ask yourself: "Does ANY skill match this situation?"
 3. ☐ If yes → Use the Skill tool to load and run the skill
 4. ☐ Announce which skill you're using
@@ -33,17 +33,16 @@ Monitor conversation for these triggers and suggest appropriate skills:
 
 | Trigger Pattern | Suggested Skill | Rationale |
 |----------------|-----------------|-----------|
-| Emotional language (overwhelm, anxiety, frustration, anger, sadness) | `inner:emotion-processing` | Strong emotions need processing |
+| Emotional language (overwhelm, anxiety, frustration, anger, sadness) | `inner:self-connection` | Strong emotions need processing |
 | Conflict/disagreement mentioned | `communication:nvc-conversation` | NVC framework for difficult conversations |
 | Decision paralysis ("should I...", "can't decide", comparing options) | `business:decision-making` | Structured decision framework helps |
-| Creative frustration ("stuck", "blocked", "can't think of ideas") | `creative:creative-block` | Unsticking creative process |
-| "I should..." statements | `productivity:priority-setting` | Distinguishing real priorities |
+| Creative frustration ("stuck", "blocked", "can't think of ideas") | `creative:brainstorming` | Unsticking creative process |
 | End-of-week timing (Friday afternoon) | `business:weekly-review` | Weekly reflection and planning |
-| Planning discussions ("next quarter", "goals", "strategy") | `business:strategic-planning` | Strategic thinking workflow |
-| Feeling scattered or overwhelmed | `productivity:daily-shutdown` | End-of-day closure |
-| "How do I tell them..." | `communication:boundary-setting` | Setting boundaries skillfully |
-| Research project mentioned | `research:question-formulation` | Defining good research questions |
-| Values confusion or drift | `inner:values-clarification` | Reconnecting with what matters |
+| Feeling scattered or overwhelmed at end of day | `productivity:daily-shutdown` | End-of-day closure |
+| Starting the workday | `productivity:daily-startup` | Beginning-of-day ritual |
+| Sleep issues, tiredness, evening routine | `health:sleep-routine` | Sleep optimization |
+| Gym, lifting, strength training | `health:strength-program` | Progressive overload training |
+| Diet, nutrition, meal prep, macros | `health:nutrition-planning` | Sustainable nutrition system |
 
 ### Suggestion Format
 
@@ -58,7 +57,7 @@ This will [brief outcome - what the skill accomplishes].
 **Example:**
 ```
 I notice you're expressing frustration about being stuck on this design.
-Would you like to use the creative:creative-block skill?
+Would you like to use the creative:brainstorming skill?
 
 This will walk you through a structured process for unsticking creative work.
 ```
@@ -92,6 +91,7 @@ User types: `/review`
 - `/nvc` → `communication:nvc-conversation`
 - `/decide` → `business:decision-making`
 - `/shutdown` → `productivity:daily-shutdown`
+- `/startup` → `productivity:daily-startup`
 
 ### 4. Silent Mode (Advanced)
 User adds skill rules to system prompt directly
@@ -119,11 +119,11 @@ If you catch yourself thinking ANY of these thoughts, STOP. You are rationalizin
 
 ## Integration with Superpowers
 
-If both superskills and superpowers are available:
+If both lifeskills and superpowers are available:
 
 **Domain separation:**
 - Superpowers handles: Code, engineering, testing, git, technical workflows
-- Superskills handles: Everything else (business, creative, inner, communication, etc.)
+- LifeSkills handles: Everything else (business, creative, inner, communication, health, etc.)
 
 **No conflicts:** Domains don't overlap, clear boundaries
 
@@ -141,17 +141,18 @@ If both superskills and superpowers are available:
 - **productivity:*** - Personal productivity, habits, time management
 - **inner:*** - Emotional processing, self-connection, spiritual practice
 - **communication:*** - NVC, conflict resolution, boundaries, listening
+- **health:*** - Sleep, strength training, nutrition
 
 ## Skill Discovery Commands
 
 **List all skills:**
 ```bash
-ls -la ~/.claude/superskills/skills/*/SKILL.md
+ls -la ~/.claude/lifeskills/skills/*/SKILL.md
 ```
 
 **Search for skill by keyword:**
 ```bash
-grep -r "description.*[keyword]" ~/.claude/superskills/skills/
+grep -r "description.*[keyword]" ~/.claude/lifeskills/skills/
 ```
 
 **Read specific skill:**
@@ -160,7 +161,7 @@ Use Skill tool: `skill: "domain:skill-name"`
 ## Summary
 
 **Starting any non-code conversation:**
-1. Check if any superskill matches context
+1. Check if any lifeskill matches context
 2. If yes → Suggest the skill
 3. If accepted → Load and follow it
 4. Announce you're using it
