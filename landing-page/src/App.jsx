@@ -8,6 +8,7 @@ import {
   Layout,
   BrainCircuit,
   ArrowRight,
+  Package,
 } from 'lucide-react';
 import './App.css';
 
@@ -56,6 +57,15 @@ const SKILLS_DATA = [
   { id: 'self-connection', name: 'Self Connection', icon: '💜', duration: '15-30 min', framework: 'NVC + Focusing', domain: 'INNER', description: 'Process difficult emotions by connecting with body sensations and identifying underlying needs.', phases: ['Pause', 'Body', 'Feeling', 'Need', 'Respond'] },
   { id: 'nvc-conversation', name: 'NVC Conversation', icon: '💬', duration: '20-45 min', framework: 'Nonviolent Communication', domain: 'COMMUNICATION', description: 'Navigate conflict by expressing observations, feelings, needs, and requests without blame.', phases: ['Prepare', 'Observe', 'Feel', 'Need', 'Request', 'Listen'] },
   { id: 'brainstorming', name: 'Brainstorming', icon: '💡', duration: '30-60 min', framework: 'SCAMPER + Design Thinking', domain: 'CREATIVE', description: 'Generate innovative ideas using proven creativity frameworks and escape conventional thinking.', phases: ['Diverge', 'Challenge', 'Combine', 'Converge', 'Refine'] },
+];
+
+const BUNDLES_DATA = [
+  { id: 'lifeskills-all', name: 'All Skills', icon: '📦', count: 22, description: 'Complete collection of all 22 LifeSkills', color: 'from-blue-500 to-purple-500' },
+  { id: 'lifeskills-finance', name: 'Finance', icon: '💰', count: 7, description: 'Budgeting, investing, taxes, retirement', color: 'from-emerald-500 to-teal-500' },
+  { id: 'lifeskills-business', name: 'Business', icon: '📈', count: 5, description: 'Planning, pricing, sales, clients', color: 'from-blue-500 to-cyan-500' },
+  { id: 'lifeskills-personal', name: 'Personal', icon: '💜', count: 4, description: 'Communication, emotions, creativity, decisions', color: 'from-purple-500 to-pink-500' },
+  { id: 'lifeskills-productivity', name: 'Productivity', icon: '⚡', count: 3, description: 'Daily startup, shutdown, weekly review', color: 'from-green-500 to-emerald-500' },
+  { id: 'lifeskills-health', name: 'Health', icon: '💪', count: 3, description: 'Sleep, strength, nutrition', color: 'from-teal-500 to-cyan-500' },
 ];
 
 /**
@@ -240,6 +250,28 @@ const HowToUseStep = ({ number, title, description, code }) => (
   </div>
 );
 
+const BundleCard = ({ bundle }) => (
+  <a
+    href={`/skills/${bundle.id}.zip`}
+    download
+    className="group relative flex flex-col p-5 bg-slate-800/40 border border-slate-700 rounded-xl overflow-hidden hover:border-slate-500 hover:shadow-2xl transition-all duration-300"
+  >
+    <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${bundle.color} opacity-60 group-hover:opacity-100 transition-opacity`} />
+    <div className="flex items-center gap-3 mb-3">
+      <span className="text-2xl">{bundle.icon}</span>
+      <div>
+        <h3 className="text-lg font-bold text-white">{bundle.name}</h3>
+        <span className="text-xs text-slate-400">{bundle.count} skills</span>
+      </div>
+    </div>
+    <p className="text-slate-400 text-sm mb-4 flex-grow">{bundle.description}</p>
+    <div className="flex items-center gap-2 text-sm font-medium text-blue-400 group-hover:text-blue-300">
+      <Package size={16} />
+      Download Bundle
+    </div>
+  </a>
+);
+
 const App = () => {
   const [activeDomain, setActiveDomain] = useState('ALL');
 
@@ -310,6 +342,21 @@ const App = () => {
             </div>
           </div>
 
+          {/* Bundles Section */}
+          <div className="mb-12 p-6 bg-slate-800/30 rounded-2xl border border-slate-700/50">
+            <div className="flex items-center gap-2 mb-4">
+              <Package size={20} className="text-blue-400" />
+              <h3 className="text-lg font-bold text-white">Download Bundles</h3>
+              <span className="text-xs text-slate-400 ml-2">for Claude Desktop</span>
+            </div>
+            <p className="text-slate-400 text-sm mb-6">Install multiple skills at once. Upload to Claude Desktop via Settings → Capabilities → Skills.</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
+              {BUNDLES_DATA.map(bundle => (
+                <BundleCard key={bundle.id} bundle={bundle} />
+              ))}
+            </div>
+          </div>
+
           {/* Desktop Filter Tabs */}
           <div className="hidden md:flex flex-wrap gap-2 mb-10 sticky top-20 z-40 bg-slate-900/90 py-4 backdrop-blur-md -mx-4 px-4 border-b border-transparent transition-all">
             <button
@@ -336,6 +383,8 @@ const App = () => {
               </button>
             ))}
           </div>
+
+          <h3 className="text-lg font-semibold text-slate-300 mb-6">Individual Skills</h3>
 
           {/* Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
