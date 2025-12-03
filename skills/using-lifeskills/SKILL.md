@@ -31,18 +31,59 @@ Before responding to ANY user message about life/work (non-code topics), you MUS
 
 Monitor conversation for these triggers and suggest appropriate skills:
 
+**Business (5 skills):**
 | Trigger Pattern | Suggested Skill | Rationale |
 |----------------|-----------------|-----------|
-| Emotional language (overwhelm, anxiety, frustration, anger, sadness) | `inner:self-connection` | Strong emotions need processing |
-| Conflict/disagreement mentioned | `communication:nvc-conversation` | NVC framework for difficult conversations |
-| Decision paralysis ("should I...", "can't decide", comparing options) | `business:decision-making` | Structured decision framework helps |
-| Creative frustration ("stuck", "blocked", "can't think of ideas") | `creative:brainstorming` | Unsticking creative process |
-| End-of-week timing (Friday afternoon) | `business:weekly-review` | Weekly reflection and planning |
-| Feeling scattered or overwhelmed at end of day | `productivity:daily-shutdown` | End-of-day closure |
-| Starting the workday | `productivity:daily-startup` | Beginning-of-day ritual |
-| Sleep issues, tiredness, evening routine | `health:sleep-routine` | Sleep optimization |
-| Gym, lifting, strength training | `health:strength-program` | Progressive overload training |
-| Diet, nutrition, meal prep, macros | `health:nutrition-planning` | Sustainable nutrition system |
+| Business goals, quarterly planning, strategy | `business-planning` | Strategic planning framework |
+| Client issues, onboarding, retention | `client-management` | Client relationship management |
+| Pricing decisions, what to charge | `pricing-strategy` | Value-based pricing framework |
+| Growing revenue, sales, scaling | `revenue-growth` | Revenue growth levers |
+| Writing proposals, closing deals | `sales-proposals` | Consultative selling process |
+
+**Finance (7 skills):**
+| Trigger Pattern | Suggested Skill | Rationale |
+|----------------|-----------------|-----------|
+| Major purchase (car, house, expensive item) | `big-purchases` | Major purchase decision framework |
+| Budgeting, monthly spending, expense tracking | `budgeting` | Zero-based budgeting system |
+| Debt, paying off loans, credit cards | `debt-payoff` | Debt elimination strategy |
+| Net worth, financial health check | `financial-review` | Periodic financial review |
+| Investments, portfolio, rebalancing | `portfolio-assessment` | Portfolio evaluation |
+| Retirement, 401k, IRA, FIRE | `retirement-planning` | Retirement planning framework |
+| Taxes, deductions, tax planning | `tax-mitigation` | Legal tax reduction strategies |
+
+**Productivity (3 skills):**
+| Trigger Pattern | Suggested Skill | Rationale |
+|----------------|-----------------|-----------|
+| End-of-week timing (Friday afternoon) | `weekly-review` | Weekly reflection and planning |
+| Feeling scattered or overwhelmed at end of day | `daily-shutdown` | End-of-day closure |
+| Starting the workday, morning routine | `daily-startup` | Beginning-of-day ritual |
+
+**Health (3 skills):**
+| Trigger Pattern | Suggested Skill | Rationale |
+|----------------|-----------------|-----------|
+| Sleep issues, tiredness, evening routine | `sleep-routine` | Sleep optimization |
+| Gym, lifting, strength training | `strength-program` | Progressive overload training |
+| Diet, nutrition, meal prep, macros | `nutrition-planning` | Sustainable nutrition system |
+
+**Communication (1 skill):**
+| Trigger Pattern | Suggested Skill | Rationale |
+|----------------|-----------------|-----------|
+| Conflict/disagreement, difficult conversation | `nvc-conversation` | Nonviolent Communication framework |
+
+**Inner (1 skill):**
+| Trigger Pattern | Suggested Skill | Rationale |
+|----------------|-----------------|-----------|
+| Emotional language (overwhelm, anxiety, frustration) | `self-connection` | Emotional processing |
+
+**Creative (1 skill):**
+| Trigger Pattern | Suggested Skill | Rationale |
+|----------------|-----------------|-----------|
+| Creative frustration ("stuck", "blocked", "no ideas") | `brainstorming` | Structured creative ideation |
+
+**Decision-Making (1 skill):**
+| Trigger Pattern | Suggested Skill | Rationale |
+|----------------|-----------------|-----------|
+| Decision paralysis ("should I...", "can't decide") | `decision-making` | Strategic decision framework |
 
 ### Suggestion Format
 
@@ -79,19 +120,21 @@ If user declines:
 AI detects context and suggests skill (described above)
 
 ### 2. Explicit Call
-User directly requests: "use inner:self-connection"
+User directly requests: "use self-connection" or "lifeskills:self-connection"
 → Load and execute that skill immediately
 
 ### 3. Slash Command
 User types: `/review`
-→ Maps to `business:weekly-review` skill
+→ Maps to `weekly-review` skill
 
 **Common mappings:**
-- `/review` → `business:weekly-review`
-- `/nvc` → `communication:nvc-conversation`
-- `/decide` → `business:decision-making`
-- `/shutdown` → `productivity:daily-shutdown`
-- `/startup` → `productivity:daily-startup`
+- `/review` → `weekly-review`
+- `/nvc` → `nvc-conversation`
+- `/decide` → `decision-making`
+- `/shutdown` → `daily-shutdown`
+- `/startup` → `daily-startup`
+- `/budget` → `budgeting`
+- `/taxes` → `tax-mitigation`
 
 ### 4. Silent Mode (Advanced)
 User adds skill rules to system prompt directly
@@ -133,21 +176,51 @@ If both lifeskills and superpowers are available:
 - Both follow checklist-based workflows
 - Both announce skill usage
 
-## Available Skill Domains
+## Available Skills (22 total)
 
-- **business:*** - Business operations, planning, decision-making
-- **creative:*** - Creative work, ideation, feedback integration
-- **research:*** - Research, analysis, synthesis
-- **productivity:*** - Personal productivity, habits, time management
-- **inner:*** - Emotional processing, self-connection, spiritual practice
-- **communication:*** - NVC, conflict resolution, boundaries, listening
-- **health:*** - Sleep, strength training, nutrition
+**Business (5):**
+- `business-planning` - Business goal setting and strategic planning
+- `client-management` - Client relationships and retention
+- `pricing-strategy` - Product/service pricing optimization
+- `revenue-growth` - Systematic business revenue growth
+- `sales-proposals` - Consultative selling and proposal writing
+
+**Finance (7):**
+- `big-purchases` - Major purchase decision framework
+- `budgeting` - Zero-based monthly budgeting
+- `debt-payoff` - Debt elimination strategy
+- `financial-review` - Periodic financial health check
+- `portfolio-assessment` - Investment portfolio evaluation
+- `retirement-planning` - Retirement savings strategy
+- `tax-mitigation` - Legal tax reduction strategies
+
+**Productivity (3):**
+- `weekly-review` - GTD-based weekly planning and reflection
+- `daily-shutdown` - End-of-day shutdown ritual
+- `daily-startup` - Beginning-of-day startup ritual
+
+**Health (3):**
+- `sleep-routine` - Evidence-based sleep optimization
+- `strength-program` - Progressive overload strength training
+- `nutrition-planning` - Sustainable nutrition and meal prep
+
+**Communication (1):**
+- `nvc-conversation` - Nonviolent Communication framework
+
+**Inner (1):**
+- `self-connection` - NVC/Focusing-based emotional processing
+
+**Creative (1):**
+- `brainstorming` - Structured creative ideation process
+
+**Decision-Making (1):**
+- `decision-making` - Strategic decision-making with pre-mortem analysis
 
 ## Skill Discovery Commands
 
 **List all skills:**
 ```bash
-ls -la ~/.claude/lifeskills/skills/*/SKILL.md
+ls ~/.claude/lifeskills/skills/
 ```
 
 **Search for skill by keyword:**
@@ -156,7 +229,7 @@ grep -r "description.*[keyword]" ~/.claude/lifeskills/skills/
 ```
 
 **Read specific skill:**
-Use Skill tool: `skill: "domain:skill-name"`
+Use Skill tool: `skill: "lifeskills:skill-name"` (e.g., `skill: "lifeskills:budgeting"`)
 
 ## Summary
 
